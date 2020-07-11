@@ -1,0 +1,13 @@
+.ImageCard-img {
+  width: 253px;
+  height: 184px;
+  /* background-attachment: fixed; */
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 550px) {
+  .ImageCard-img {
+    width: 450px;
+    height: 320px;
+  }
+}

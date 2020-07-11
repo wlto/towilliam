@@ -1,0 +1,23 @@
+.Navigation {
+  padding: 1.8rem 2.4rem;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.Navigation .Navigation-list {
+  list-style-type: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.Navigation .Navigation-list li {
+  display: inline-block;
+}
+
+.Navigation .Navigation-list li:nth-child(2n) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.Navigation .Navigation-list li a {
+  color: var(--colour-main);
+}
