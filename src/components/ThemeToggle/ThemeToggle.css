@@ -1,0 +1,46 @@
+.ThemeToggle {
+  position: relative;
+  width: 5rem;
+  height: 2.6rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  background-color: var(--colour-text);
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ThemeToggle-knob {
+  /* display: none; */
+  position: absolute;
+  top: 50%;
+  left: 0.4rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--colour-card-bg);
+  border-radius: 5rem;
+}
+
+.ThemeToggle-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+/* @media screen and (min-width: 480px) {
+  .ThemeToggle {
+    width: 5.8rem;
+    height: 3.2rem;
+  }
+
+  .ThemeToggle-knob {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .ThemeToggle-icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+} */

@@ -1,6 +1,10 @@
 import React, { useEffect, useContext } from "react"
 
 import { AppContext } from "../../contexts/AppContext"
+import MoonIcon from "../../assets/icons/moon.svg"
+import SunnyIcon from "../../assets/icons/sunny.svg"
+
+import "./ThemeToggle.css"
 
 const ThemeToggle = () => {
   const { state, dispatch } = useContext(AppContext)
@@ -25,7 +29,11 @@ const ThemeToggle = () => {
   return (
     <div className="ThemeToggle" onClick={() => {
       window.__setPreferredTheme(window.__theme === `dark` ? `light` : `dark`)
-    }}>ThemeToggle</div>
+    }}>
+      <div className="ThemeToggle-knob"></div>
+      <span className="ThemeToggle-icon" role="img" aria-label="moon"><MoonIcon /></span>
+      <span className="ThemeToggle-icon" role="img" aria-label="sunny"><SunnyIcon /></span>
+    </div>
   )
 }
 

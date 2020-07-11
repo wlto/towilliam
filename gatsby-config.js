@@ -5,6 +5,14 @@ module.exports = {
     author: `@wlto`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-svgr-loader",
+      options: {
+        rule: {
+          include: /\.svg$/
+        }
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

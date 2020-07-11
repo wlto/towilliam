@@ -17,8 +17,8 @@ const IndexPage = () => (
       <div className="Content">
         <ImageCard />
         <Navigation />
-        <ThemeToggle />
       </div>
+      <ThemeToggle />
     </Layout>
   </AppContextProvider>
 )

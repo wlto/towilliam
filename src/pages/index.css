@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 250ms ease-in-out;
+  transition: color 250ms ease-in-out, 
+              background-color 250ms ease-in-out, 
+              left 250ms ease-in-out;
 }
 
 :root {
@@ -22,6 +24,14 @@ body {
   --colour-card-bg: #ffffff;
   --colour-text:    #242424;
 
+  --theme-toggle-bg-width: 5rem;
+  --theme-toggle-bg-height: 2.6rem;
+  --theme-toggle-knob-width: 2rem;
+  --theme-toggle-knob-height: 2rem;
+  --theme-toggle-knob-offset: 0.4rem;
+  --theme-toggle-svg-width: 1.4rem;
+  --theme-toggle-svg-height: 1.4rem;
+
   background-color: var(--colour-bg);
 }
 
@@ -29,6 +39,10 @@ body.dark {
   --colour-bg:      #000000;
   --colour-card-bg: #242424;
   --colour-text:    #e5e5e5;
+}
+
+body.dark .ThemeToggle-knob {
+  left: calc(100% - var(--theme-toggle-knob-width) - var(--theme-toggle-knob-offset));
 }
 
 .Heading {
@@ -58,10 +72,15 @@ body.dark {
   :root {
     font-size: 12px;
   }
-
-  .Content .Navigation {
-    /* right: 36%; */
-    /* bottom: 10%; */
+  
+  body {
+    --theme-toggle-bg-width: 5.8rem;
+    --theme-toggle-bg-height: 3.2rem;
+    --theme-toggle-knob-width: 2.4rem;
+    --theme-toggle-knob-height: 2.4rem;
+    --theme-toggle-knob-offset: -0rem;
+    --theme-toggle-svg-width: 2rem;
+    --theme-toggle-svg-height: 2rem;
   }
 }
 
