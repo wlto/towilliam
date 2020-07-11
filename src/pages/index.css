@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -25,4 +26,58 @@ body {
 body.dark {
   --colour-bg:    #000000;
   --colour-main:  #e5e5e5;
+}
+
+.Heading {
+  padding-left: 10%;
+  font-size: 4rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.Content {
+  position: relative;
+  margin-left: 4rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+}
+
+.Content .Navigation {
+  position: absolute;
+  left: 1rem;
+  bottom: -2.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .Content .Navigation {
+    /* right: 36%; */
+    /* bottom: 10%; */
+  }
+}
+
+@media screen and (min-width: 640px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .Content .Navigation {
+    left: 4rem;
+    bottom: 14%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .Content .Navigation {
+    left: 4rem;
+  }
 }

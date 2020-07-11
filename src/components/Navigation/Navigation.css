@@ -1,5 +1,5 @@
 .Navigation {
-  padding: 1.8rem 2.4rem;
+  padding: 0 2.4rem;
   display: inline-block;
   background-color: #fff;
 }
@@ -11,6 +11,7 @@
 
 .Navigation .Navigation-list li {
   display: inline-block;
+  line-height: 5rem;
 }
 
 .Navigation .Navigation-list li:nth-child(2n) {
