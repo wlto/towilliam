@@ -17,8 +17,9 @@
 .Navigation .Navigation-list li:nth-child(2n) {
   padding-left: 1rem;
   padding-right: 1rem;
+  color: var(--colour-text);
 }
 
 .Navigation .Navigation-list li a {
-  color: var(--colour-main);
+  color: var(--colour-text);
 }

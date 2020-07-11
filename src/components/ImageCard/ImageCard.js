@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import "./ImageCard.css"
+
+import { AppContext } from "../../contexts/AppContext"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -15,7 +17,7 @@ import "./ImageCard.css"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ImageCard = ({theme}) => {
+const ImageCard = () => {
   const data = useStaticQuery(
     graphql`
       query MyQuery {
@@ -33,10 +35,12 @@ const ImageCard = ({theme}) => {
     `
   )
 
+  const { state } = useContext(AppContext)
+
   return (
     <div className="ImageCard">
       <BackgroundImage className="ImageCard-img" fluid={
-        theme === `dark` ?
+        state.theme === `dark` ?
         data.allImageSharp.edges[0].node.fluid :
         data.allImageSharp.edges[1].node.fluid
       } fadeIn="soft" />    
