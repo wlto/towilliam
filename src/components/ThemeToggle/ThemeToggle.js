@@ -7,7 +7,7 @@ import SunnyIcon from "../../assets/icons/sunny.svg"
 import "./ThemeToggle.css"
 
 const ThemeToggle = () => {
-  const { state, dispatch } = useContext(AppContext)
+  const { dispatch } = useContext(AppContext)
 
   useEffect(() => {
     dispatch({
@@ -24,16 +24,24 @@ const ThemeToggle = () => {
         }
       })
     }
-  }, [])
+  }, [dispatch])
 
   return (
-    <div className="ThemeToggle" onClick={() => {
-      window.__setPreferredTheme(window.__theme === `dark` ? `light` : `dark`)
-    }}>
+    <button className="ThemeToggle" 
+      onClick={() => {
+        window.__setPreferredTheme(window.__theme === `dark` ? `light` : `dark`)
+      }}
+      onKeyPress={e => {
+        console.log(e.keycode);
+        if (e.keycode === 32) {
+          window.__setPreferredTheme(window.__theme === `dark` ? `light` : `dark`)
+        }
+      }}
+    >
       <div className="ThemeToggle-knob"></div>
       <span className="ThemeToggle-icon" role="img" aria-label="moon"><MoonIcon /></span>
       <span className="ThemeToggle-icon" role="img" aria-label="sunny"><SunnyIcon /></span>
-    </div>
+    </button>
   )
 }
 

@@ -9,6 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  outline: none;
+  border: none;
+  opacity: 0;
 }
 
 .ThemeToggle-knob {

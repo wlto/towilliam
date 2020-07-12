@@ -5,6 +5,10 @@ const AppContextReducer = (state, action) => {
         ...state,
         theme: action.payload.theme
       }
+    default:
+      return {
+        ...state
+      }
   }
 }
 
