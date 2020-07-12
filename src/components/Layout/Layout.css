@@ -19,7 +19,7 @@
 .Layout .Main .ThemeToggle {
   position: absolute;
   left: 50%;
-  bottom: 3rem;
+  bottom: 6rem;
   transform: translateX(-50%);
 }
 
